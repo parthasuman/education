@@ -344,9 +344,19 @@
             </p>
           </div>
           <div class="col-lg-6 col-md-12 col-sm-12 col-12 ps-5 pt-5">
-            <button class="btn btn-light text-info px-5 fw-bold" type="submit">
+            
+            <button id="mytoast" class="btn btn-light text-info px-5 fw-bold" type="submit">
               Register
             </button>
+            <div class="toast" id="toast">
+              <div class="toast-header">
+                <h3>Our offer</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+              </div>
+              <div class="toast-body">
+                <p>Join our course you will get discount 20%</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -419,6 +429,15 @@
       
     </section>
     <!--student-end-->
+    <!--feedback-star-->
+    <section class="container">
+      <div>
+        <h2 class="text-center">Some Students Feedback</h2>
+        <p class="text-center mb-5">It is a long established fact that a reader will be distracted by the readable 
+          content of a page when looking at its layout.</p>
+      </div>
+    </section>
+    <!--feedback-end-->
     <!--question-star-->
     <section class="container w-50 my-5 gy-5">
       <h2>Frequently Asked Questions</h2>
@@ -559,5 +578,16 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const toastTrigger = document.getElementById('mytoast')
+const toastLiveExample = document.getElementById('toast')
+if (toastTrigger) {
+  toastTrigger.addEventListener('click', () => {
+    const toast = new bootstrap.Toast(toastLiveExample)
+
+    toast.show()
+  })
+}
+    </script>
   </body>
 </html>
